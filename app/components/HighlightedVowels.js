@@ -1,14 +1,16 @@
 import React from "react";
 
-function HighlightedVowels({vowelInput}) {
+function HighlightedVowels({ vowelInput }) {
   return (
-    <p className="type-text animate__animated animate__fadeIn mt-12 text-5xl tracking-wider">
-      {vowelInput.map((letter, i) => (
-        <span key={i} style={{ color: letter.isVowel ? "#1f8f5f" : "white" }}>
-          {letter.character}
-        </span>
-      ))}
-    </p>
+    <div className="mt-12 max-w-4xl">
+      <p className="type-text animate__animated animate__fadeIn text-3xl lg:text-5xl tracking-widest text-center">
+        {vowelInput.map((letter, i) => (
+          <span key={i} style={{ color: letter.isVowel ? "#9333ea" : "white" }}>
+            {letter.character}
+          </span>
+        ))}
+      </p>
+    </div>
   );
 }
 
