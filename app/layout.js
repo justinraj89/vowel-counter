@@ -1,5 +1,6 @@
 import './globals.css'
 import {barriecito} from './fonts';
+import Navbar from './components/Navbar';
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className='bg-zinc-900'>
+        <Navbar />
         <div className={barriecito.className}>
           {children}
         </div>
