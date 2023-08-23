@@ -3,14 +3,14 @@ import Link from 'next/link'
 
 function Navbar() {
   return (
-    <nav className='border-2 border-red-300 h-16 flex justify-between text-white px-24 items-center'>
+    <nav className='h-16 flex justify-between text-white px-24 items-center border-b border-zinc-800 font-mono shadow-md'>
         <div>
-            <h3>Logo</h3>
+            <Link href='/'>Logo</Link>
         </div>
         <div>
             <ul className='flex gap-8'>
                 <Link href='/vowelCounter'>Vowel Counter</Link>
-                <li>link</li>
+                <Link href='/hashtagGenerator'>#hashtagGenerator</Link>
                 <li>link</li>
             </ul>
         </div>
