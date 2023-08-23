@@ -6,6 +6,7 @@ function VowelForm({ vowels, setVowelInput, setShowResults, setCount }) {
 
   const vowelInput = useRef();
 
+
   function countVowels(e) {
     e.preventDefault();
     let count = 0;

@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import "animate.css";
 import VowelForm from "./components/VowelForm";
 import HighlightedVowels from "./components/HighlightedVowels";
@@ -12,6 +12,7 @@ export default function Home() {
   const [count, setCount] = useState(null);
 
   const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+
 
   return (
     <div className="flex flex-col items-center overflow-hidden p-4">
