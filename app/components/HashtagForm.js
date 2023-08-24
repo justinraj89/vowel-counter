@@ -1,15 +1,24 @@
-"use client";
 import { useRef } from "react";
 //=================================
 
-function HashtagForm() {
-
+function HashtagForm({setHashTagged, setShowResults}) {
   const hashtagInput = useRef();
-
 
   function generateHashtag(e) {
     e.preventDefault();
-   
+    const splitUpInput = hashtagInput.current.value.split(" ");
+    let formatted = splitUpInput
+      .map((word, i) => {
+        if (i === 0) {
+          return word.charAt(0).toLowerCase() + word.slice(1).toLowerCase();
+        } else {
+          return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+        }
+      })
+      .join("");
+    setHashTagged("#" + formatted);
+    setShowResults(true)
+    hashtagInput.current.value = ''
   }
 
   return (

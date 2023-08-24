@@ -7,7 +7,7 @@ import HashtagText from "../components/HashtagText";
 
 export default function Home() {
      const [showResults, setShowResults] = useState(false)
-
+     const [hashTagged, setHashTagged] = useState(null);
 
   return (
     <div className="flex flex-col items-center overflow-hidden p-4">
@@ -20,13 +20,13 @@ export default function Home() {
         </h2>
       </div>
 
-      <HashtagForm/>
+      <HashtagForm setHashTagged={setHashTagged} setShowResults={setShowResults}/>
 
       
 
       {showResults && (
         <div className="flex flex-col justify-center items-center">
-          <HashtagText />
+          <HashtagText hashTagged={hashTagged} />
         </div>
       )}
     </div>

@@ -1,8 +1,9 @@
 import React from 'react'
 
-function HashtagText() {
+function HashtagText({hashTagged}) {
   return (
-    <div>HashtagText</div>
+    
+    <div>{hashTagged}</div>
   )
 }
 
