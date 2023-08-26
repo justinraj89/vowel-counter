@@ -4,12 +4,13 @@ import "animate.css";
 import VowelForm from "../components/VowelForm";
 import HighlightedVowels from "../components/HighlightedVowels";
 import TotalVowels from "../components/TotalVowels";
+import Link from "next/link";
 //========================================
 
 export default function Home() {
   const [vowelInput, setVowelInput] = useState(null);
   const [showResults, setShowResults] = useState(false);
-  const [count, setCount] = useState(null);
+  const [vowelCount, setVowelCount] = useState(null);
 
   const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
 
@@ -30,13 +31,14 @@ export default function Home() {
         vowels={vowels}
         setVowelInput={setVowelInput}
         setShowResults={setShowResults}
-        setCount={setCount}
+        setVowelCount={setVowelCount}
       />
 
       {showResults && (
         <div className="flex flex-col justify-center items-center">
           <HighlightedVowels vowelInput={vowelInput} />
-          <TotalVowels count={count}/>
+          <TotalVowels vowelCount={vowelCount}/>
+          <Link href='/vowelCounter/function' className="text-sky-300 hover:text-sky-400 tracking-tight underline text-center font-mono text-sm mt-8 lg:hover:scale-[1.02] lg:duration-300">Click here to see how this was made</Link>
         </div>
       )}
     </div>

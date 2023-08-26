@@ -2,7 +2,7 @@
 import { useRef } from "react";
 //=================================
 
-function VowelForm({ vowels, setVowelInput, setShowResults, setCount }) {
+function VowelForm({ vowels, setVowelInput, setShowResults, setVowelCount }) {
 
   const vowelInput = useRef();
 
@@ -24,7 +24,7 @@ function VowelForm({ vowels, setVowelInput, setShowResults, setCount }) {
         isVowel: vowels.includes(char),
       };
     });
-    setCount(count);
+    setVowelCount(count);
     setVowelInput(highlightVowels);
     setShowResults(true);
     vowelInput.current.value = "";
