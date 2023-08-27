@@ -16,7 +16,7 @@ export default function Home() {
 
 
   return (
-    <div className="flex flex-col items-center overflow-hidden p-4">
+    <div className="flex flex-col items-center overflow-hidden p-4 min-h-screen mt-16">
       <div className="max-w-md md:max-w-xl">
         <h1 className="tracking-wide bg-gradient-to-r from-purple-600 via-emerald-500 to-yellow-100 bg-clip-text text-transparent md:text-7xl text-5xl text-center mt-4 md:mt-14 animate__animated animate__pulse">
           Vowel Counter
