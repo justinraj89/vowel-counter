@@ -1,10 +1,13 @@
-import React from "react";
+import Link from "next/link";
 
 function Navbar({ navbarOpen, setNavbarOpen }) {
   return (
-    <header className={`${navbarOpen ? 'bg-zinc-950' : 'bg-zinc-900'} w-full fixed top-0 left-0 z-20 h-12 px-8 py-8 flex justify-between items-center`}>
+    <header className={`bg-zinc-950 w-full fixed top-0 left-0 z-20 h-12 px-8 py-8 flex justify-between items-center`}>
       <div className="text-white flex-grow z-20">
-        <h1 className="text-2xl font-bold my-0">Logo</h1>
+        <Link href='/'>
+          <h1 className="text-xl lg:text-2xl font-bold my-0">Learn to Code</h1>
+        </Link>
+        
       </div>
 
       
